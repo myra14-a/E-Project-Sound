@@ -1,15 +1,25 @@
 @extends('user.layout')
 @section('content')
+<<<<<<< HEAD
 @php($site = \App\Models\SiteSetting::current())
+=======
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
     <!-- Hero Section Begin -->
     <section class="hero spad set-bg" data-setbg="users/img/hero-bg.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="hero__text">
+<<<<<<< HEAD
                         <span>{{ $site->hero_subtitle ?: 'New single' }}</span>
                         <h1>{{ $site->hero_title ?: 'Feel the heart beats' }}</h1>
                         <p>{{ $site->hero_description ?: 'Discover the latest music, artists, albums and videos.' }}</p>
+=======
+                        <span>New single</span>
+                        <h1>Feel the heart beats</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br />tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
                         <a href="https://www.youtube.com/watch?v=K4DyBUG242c" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                     </div>
                 </div>
@@ -21,6 +31,7 @@
     </section>
     <!-- Hero Section End -->
 
+<<<<<<< HEAD
     <!-- Dynamic New Additions -->
     <section class="spad" style="background:#0b0b0b;">
         <div class="container">
@@ -41,6 +52,8 @@
     <style>.new-flash{position:absolute;top:12px;left:12px;background:#ff2b2b;color:#fff;padding:4px 9px;border-radius:20px;font-size:11px;font-weight:700;z-index:2;animation:flashNew .8s infinite alternate}@keyframes flashNew{from{opacity:.35}to{opacity:1}}</style>
 
 
+=======
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
 
 
 <section class="artists-section">

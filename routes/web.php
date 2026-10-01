@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MediaController;
@@ -18,6 +19,12 @@ Route::get('/', function () {
 
     return view('auth.landing');
 })->name('welcome');
+=======
+
+Route::get('/', function () {
+    return view('welcome');
+});
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
 
 Route::middleware([
     'auth:sanctum',
@@ -29,6 +36,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+<<<<<<< HEAD
 // User pages are available after signup/login.
 Route::middleware(['auth'])->group(function () {
     Route::get('/index', [HomeController::class, 'index'])->name('home');
@@ -81,3 +89,33 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
         Route::get('/website', [WebsiteController::class, 'edit'])->name('website.edit');
         Route::put('/website', [WebsiteController::class, 'update'])->name('website.update');
     });
+=======
+// user panel routes start here
+
+Route::get('/index', function () {
+    return view('user.index');
+});
+
+Route::get('/ostlist', function () {
+    return view('user.showallost');
+});
+Route::get('/about', function () {
+    return view('user.about');
+});
+
+Route::get('/contact', function () {
+    return view('user.contact');
+});
+Route::get('/blogs', function () {
+    return view('user.blog');
+});
+Route::get('/contact', function () {
+    return view('user.contact');
+});
+Route::get('/albumlist', function () {
+    return view('user.albumlist');
+});
+
+
+// user panel routes end here
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528

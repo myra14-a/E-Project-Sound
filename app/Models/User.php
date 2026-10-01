@@ -22,9 +22,12 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+<<<<<<< HEAD
     public function reviews() { return $this->hasMany(\App\Models\Review::class); }
     public function ratings() { return $this->hasMany(\App\Models\Rating::class); }
 
+=======
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
     /**
      * The attributes that are mass assignable.
      *
@@ -32,12 +35,17 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+<<<<<<< HEAD
         'username',
         'address',
         'phone',
         'email',
         'password',
         'is_admin',
+=======
+        'email',
+        'password',
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
     ];
 
     /**
@@ -47,7 +55,10 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
+<<<<<<< HEAD
         'is_admin',
+=======
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
@@ -71,7 +82,10 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
+<<<<<<< HEAD
             'is_admin' => 'boolean',
+=======
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
             'password' => 'hashed',
         ];
     }

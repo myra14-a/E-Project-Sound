@@ -13,12 +13,15 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
 use Laravel\Fortify\Fortify;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Http\Responses\LoginResponse;
 use App\Http\Responses\RegisterResponse;
 use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
 use Laravel\Fortify\Contracts\RegisterResponse as RegisterResponseContract;
+=======
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -27,8 +30,12 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+<<<<<<< HEAD
         $this->app->singleton(LoginResponseContract::class, LoginResponse::class);
         $this->app->singleton(RegisterResponseContract::class, RegisterResponse::class);
+=======
+        //
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
     }
 
     /**
@@ -42,12 +49,15 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
         Fortify::redirectUserForTwoFactorAuthenticationUsing(RedirectIfTwoFactorAuthenticatable::class);
 
+<<<<<<< HEAD
         Fortify::authenticateUsing(function (Request $request) {
             $login = trim((string) $request->input('email'));
             $user = User::where('email', $login)->orWhere('username', $login)->first();
             return $user && Hash::check((string) $request->input('password'), $user->password) ? $user : null;
         });
 
+=======
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
         RateLimiter::for('login', function (Request $request) {
             $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
 

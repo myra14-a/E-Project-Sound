@@ -16,6 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+<<<<<<< HEAD
                 @if(Auth::user()->is_admin)
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                         <x-nav-link href="{{ route('admin.dashboard') }}" :active="request()->routeIs('admin.*')">
@@ -23,6 +24,8 @@
                         </x-nav-link>
                     </div>
                 @endif
+=======
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">

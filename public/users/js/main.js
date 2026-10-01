@@ -1,6 +1,11 @@
 /*  ---------------------------------------------------
+<<<<<<< HEAD
   Template Name: SOUND
   Description:  SOUND Music HTML Template
+=======
+  Template Name: DJoz
+  Description:  DJoz Music HTML Template
+>>>>>>> 077a6826da1dee4eba4ffbee1435054103621528
   Author: Colorlib
   Author URI: https://colorlib.com
   Version: 1.0
