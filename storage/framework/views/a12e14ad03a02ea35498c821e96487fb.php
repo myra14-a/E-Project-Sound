@@ -1,0 +1,2 @@
+<img src="<?php echo e(asset('users/img/logo.png')); ?>" alt="SOUND logo" <?php echo e($attributes); ?>>
+<?php /**PATH C:\Users\LAPVY\Downloads\E-Project-Sound-COMPLETE\resources\views/components/application-logo.blade.php ENDPATH**/ ?>
